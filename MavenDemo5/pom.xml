@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sxhhh</groupId>
+    <artifactId>MavenDemo5</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--引入定义的父工程-->
+    <parent>
+        <groupId>com.sxhh</groupId>
+        <artifactId>MavenDemo4</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../MavenDemo4/pom.xml</relativePath>
+    </parent>
+    <!--导入jar包依赖的时候有两个原则：1：链路最短原则，链路最短失效时，则使用2最先定义优先原则-->
+    <!--引入jar包的时候，版本是父工程指定的-->
+    <dependencies>
+        <dependency>
+            <groupId>com.sxh</groupId>
+            <artifactId>MavenDemo</artifactId>
+            <!--在这里不定义版本号，自动引入父工程的版本号也是一种继承关系-->
+            <!--排除依赖的关键词-->
+            <exclusions>
+                <exclusion>
+                    <groupId>com.sxh</groupId>
+                    <artifactId>MavenDemo</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>
