@@ -13,9 +13,13 @@
 2.依赖的范围设置<scope>
 
 >1：provided(使用此依赖范围的Maven依赖,因为运行项目时容器提供了，就不再重复引入)
+
 >2:runtime（编译时不生效，运行时生效）
+
 >3：system(显示的指定本地系统路径的jar包systemPath)
+
 >4：test(只在编译测试代码和运行测试的时候生效)
+
 >5：import(只适用于pom文件中的依赖管理scope中)
 
 3.排除某一个jar包
