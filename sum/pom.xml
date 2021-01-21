@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sxh</groupId>
+    <artifactId>sum</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ChildPro1</module>
+        <module>ChildPro2</module>
+    </modules>
+    <!--定义子模块，可以多个子模块-->
+    <packaging>pom</packaging>
+    <!--总的项目文件：定义的版本号，包的管理-->
+    <!--指定为pom项目-->
+    <properties>
+        <mybits.version>3.5.6</mybits.version>
+        <spring.version>5.2.12.RELEASE</spring.version>
+    </properties>
+<dependencyManagement>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybits.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+    </dependencies>
+</dependencyManagement>
+</project>

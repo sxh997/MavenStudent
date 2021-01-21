@@ -61,3 +61,19 @@
         <relativePath>../MavenDemo4/pom.xml</relativePath>
     </parent>
 ```
+6.pom文件的聚合
+
+>定义pom项目
+
+```
+ <packaging>pom</packaging>
+```
+
+>定义字模块，可以多个
+
+```
+<modules>
+        <module>ChildPro1</module>
+        <module>ChildPro2</module>
+</modules>
+```
